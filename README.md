@@ -14,6 +14,7 @@ ideas
 - jwt
 - validation
 - storybook
+- designs: https://www.figma.com/community/file/1053233047330321743
 
 ## Benefits
 
