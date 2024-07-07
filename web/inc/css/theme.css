@@ -34,6 +34,9 @@
     min-width: 0px;
     width: 100%;
     padding: 16.5px 14px;
+    &.error {
+      border-color: var(--palette-red);
+    }
   }
 
   button {
