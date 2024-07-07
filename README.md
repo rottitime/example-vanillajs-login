@@ -14,3 +14,7 @@ ideas
 - jwt
 - validation
 - storybook
+
+## Benefits
+
+- NPM setup and usuage (for prettier) without impacting production files and breaking exercise requirements.
