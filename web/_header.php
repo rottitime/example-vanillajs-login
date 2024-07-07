@@ -36,6 +36,6 @@
 
 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus dignissimos velit voluptate culpa, ea veritatis consectetur dicta laudantium natus consequuntur dolores non libero optio repellat esse! Accusantium voluptatem ullam explicabo!</p>
 
-        <div class="full-width"></div>
+
         
     </div>

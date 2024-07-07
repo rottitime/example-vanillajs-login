@@ -11,11 +11,13 @@ Password can be anything
 
 ## Benefits
 
+- Mobile first approach
+- Design system concept - coded with config, theme, layout and component structure
 - Latest ECMAScript 2023 features such as module based JS
 - php docker for easy simple install
 - Ajax integration for web components
 - NPM setup and usuage (for prettier) without impacting production files and breaking exercise requirements.
-- Latest CSS features e.g. Native nested CSS
+- Latest CSS features e.g. Native nested CSS, layout props, css vars
 - Frontend validation for instant feedback. Fallback to backend validation
 - Variable/config based CSS
 - Graceful degradation for older browsers.
