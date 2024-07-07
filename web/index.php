@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <?php endif; ?>
 
     <div class="card">
-        <form action="index.php" method="POST">
+        <form action="index.php" method="POST" is="bw-login">
 
             <div class="row">
             <label for="username">Email:</label>
@@ -34,11 +34,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             
             <div class="row">
             <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required><br><br>
+            <input type="password" id="password" name="password" required>
             </div>
-            
             <button>Login</button>
-
         </form>
     </div>
 
