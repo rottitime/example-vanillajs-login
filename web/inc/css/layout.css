@@ -12,6 +12,7 @@
       align-items: center;
       justify-items: center;
       gap: var(--spacing-small);
+      color: var(--color-text);
       & img {
         width: 50px;
       }
