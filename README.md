@@ -6,6 +6,8 @@ HTML/CSS first, accessible and progressively enhanced login page and homepage he
 2. Run `docker compouse up`
 3. Go to https://localhost:3000
 
+Userneme is "test@example.com"
+
 ideas
 
 - php docker
