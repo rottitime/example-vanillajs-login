@@ -4,7 +4,25 @@ if (!isset($_COOKIE['token']) || $_COOKIE['token'] !== '1') {
     exit();
 } ?>
 <?php include '_header.php'; ?>
-   <h1>Hoempage</h1>
 
-   <a href="logout.php">Logout</a>
+
+<div class="action">
+        
+
+
+        
+
+        <div class="card">
+
+        <div class="content">
+        <p><a href="logout.php">Logout</a></p>
+        </div>
+            
+        </div>
+    </div>
+    
+
+   
+
+   
 <?php include '_footer.php'; ?>

@@ -64,9 +64,6 @@ if (!$isAjax && $_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
     
 
-    
-
-    
 
     
     
