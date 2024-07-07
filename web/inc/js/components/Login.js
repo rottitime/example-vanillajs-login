@@ -4,29 +4,22 @@ class Login extends HTMLFormElement {
   txtUsername
   txtPassword
   txtSubmit
-  //   buttonId
-  //   sectionId
 
   constructor() {
     super()
-    // const id = crypto.randomUUID()
-    // this.buttonId = `btn-${id}`
-    // this.sectionId = `pnl-${id}`
   }
 
   connectedCallback() {
     setTimeout(() => this.setup())
   }
 
-  /**
-   * Validates the login form.
-   * @returns {Object|null} - An object containing validation errors, or null if there are no errors.
-   */
   validate = () => {
     const errors = {}
-    if (!this.txtUsername.value) errors.txtUsername = 'Please enter your email address'
-    if (!this.txtPassword.value) errors.txtPassword = 'Please enter your password'
-    return Object.entries(errors).length ? errors : null
+
+    if (!validateEmail(this.txtUsername.value)) errors.txtUsername = 'Email is invalid'
+    if (!this.txtUsername.value) errors.txtUsername = 'Email is required'
+    if (!this.txtPassword.value) errors.txtPassword = 'Password is required'
+    return errors
   }
 
   resetErrors = () => {
@@ -42,8 +35,11 @@ class Login extends HTMLFormElement {
     errorSummary.innerHTML =
       '<h2 class="error-summary-title">There is a problem</h2><ul></ul>'
     const errorList = errorSummary.querySelector('ul')
+    const entries = Object.entries(errors)
 
-    Object.entries(errors).forEach(([field, message]) => {
+    if (!entries.length) return
+
+    entries.forEach(([field, message]) => {
       const listItem = document.createElement('li')
       listItem.innerText = message
       errorList.appendChild(listItem)
@@ -77,9 +73,12 @@ class Login extends HTMLFormElement {
     this.addEventListener('submit', (e) => {
       e.preventDefault()
 
-      const errors = this.validate()
+      this.resetErrors()
 
-      if (errors) this.displayErrors(errors)
+      const errors = this.validate()
+      this.displayErrors(errors)
+
+      if (!Object.keys(errors).length) this.submit()
     })
   }
 }

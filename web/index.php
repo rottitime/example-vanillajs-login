@@ -5,7 +5,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    if ($username === 'test' && $password === 'test123') {
+    if ($username === 'test@example.com') {
         setcookie('token', '1');
         header('Location: home.php');
         exit();
