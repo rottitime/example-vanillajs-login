@@ -24,15 +24,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
     <?php endif; ?>
 
-    <form action="index.php" method="POST">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required><br><br>
-        
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required><br><br>
-        
-        <input type="submit" value="Login">
-    </form>
+    <div class="card">
+        <form action="index.php" method="POST">
+
+            <div class="row">
+            <label for="username">Email:</label>
+            <input type="email" id="username" name="username" required placeholder="e.g. test@test.com" ><br><br>
+            </div>
+            
+            <div class="row">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br><br>
+            </div>
+            
+            <button>Login</button>
+
+        </form>
+    </div>
 
     
     

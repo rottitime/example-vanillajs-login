@@ -1,0 +1,25 @@
+@layer layout {
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    & a {
+      text-decoration: none;
+    }
+    & h1 a {
+      display: flex;
+      align-items: center;
+      justify-items: center;
+      gap: var(--spacing-small);
+      & img {
+        width: 50px;
+      }
+    }
+
+    nav {
+      display: flex;
+      gap: var(--spacing-small);
+    }
+  }
+}

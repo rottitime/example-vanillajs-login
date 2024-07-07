@@ -1,0 +1,23 @@
+@layer components {
+  .card {
+    background-color: var(--palette-white);
+    border: 2px solid var(--palette-black);
+    padding: 40px;
+    display: inline-block;
+    border-radius: 10px;
+  }
+
+  .alert {
+    background-color: var(--palette-red);
+    color: var(--palette-white);
+    padding: var(--spacing-xsmall) var(--spacing-small);
+    border-radius: var(--border-radius);
+    margin-bottom: var(--spacing-medium);
+  }
+
+  .row {
+    &:has(input:focus) label {
+      animation: bold-focus 0.3s forwards 0s;
+    }
+  }
+}

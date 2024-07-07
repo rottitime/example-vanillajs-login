@@ -1,11 +1,42 @@
 @layer config {
-    :root {
-        --font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-        /* pallette */
-        --color-black: #363432;
-        --color-red: #c00;
-        --color-teal: #196774;
-        --color-white: #F2F2EB;
-        
+  :root {
+    --font: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans',
+      'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+      'Segoe UI Symbol', 'Noto Color Emoji';
+
+    /* pallette */
+    --palette-black: #363432;
+    --palette-cream: #fff5e1;
+    --palette-blue: #3572ef;
+    --palette-red: #c00;
+    --palette-teal: #196774;
+    --palette-white: #fff;
+
+    /* site colours */
+    --color-link: var(--palette-blue);
+    --color-text: var(--palette-black);
+    --color-background: var(--palette-cream);
+
+    --spacing-xsmall: 10px;
+    --spacing-small: 15px;
+    --spacing-medium: 30px;
+    --spacing-large: 60px;
+    --spacing-xlarge: 120px;
+
+    /* fonts */
+    --text-large: 20px;
+    --text-large: 20px;
+
+    --border-radius: 5px;
+  }
+
+  /* animations */
+  @keyframes bold-focus {
+    from {
+      font-weight: 100;
     }
+    to {
+      font-weight: 900;
+    }
+  }
 }
