@@ -13,6 +13,23 @@ class Login extends HTMLFormElement {
     setTimeout(() => this.setup())
   }
 
+  authenticate = async () => {
+    const username = this.txtUsername.value
+    const password = this.txtPassword.value
+    const response = await fetch('index.php', {
+      method: 'POST',
+      headers: {
+        'X-Requested-With': 'XMLHttpRequest',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ username, password })
+    })
+
+    if (!response.ok) throw new Error('Failed to authenticate')
+
+    return response.text()
+  }
+
   validate = () => {
     const errors = {}
 
@@ -70,7 +87,7 @@ class Login extends HTMLFormElement {
 
     this.createErrorSummary()
 
-    this.addEventListener('submit', (e) => {
+    this.addEventListener('submit', async (e) => {
       e.preventDefault()
 
       this.resetErrors()
@@ -78,7 +95,8 @@ class Login extends HTMLFormElement {
       const errors = this.validate()
       this.displayErrors(errors)
 
-      if (!Object.keys(errors).length) this.submit()
+      if (!Object.keys(errors).length && (await this.authenticate()) === 'success')
+        this.submit()
     })
   }
 }

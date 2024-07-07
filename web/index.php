@@ -1,7 +1,17 @@
 <?php
 $error = '';
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+$isAjax =
+    isset($_SERVER['HTTP_X_REQUESTED_WITH']) &&
+    strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) === 'xmlhttprequest';
+
+if ($isAjax) {
+    setcookie('token', '1');
+    echo 'success';
+    exit();
+}
+
+if (!$isAjax && $_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
