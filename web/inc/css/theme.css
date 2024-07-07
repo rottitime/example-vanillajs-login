@@ -1,0 +1,7 @@
+@layer theme {
+    body {
+        font-family: var(--font);
+        color: var(--color-black);
+        background-color: var(--color-white);
+    }
+}

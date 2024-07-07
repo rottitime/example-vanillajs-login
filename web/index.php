@@ -1,7 +1,6 @@
 <?php
 $error = '';
 
-
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'];
     $password = $_POST['password'];
@@ -9,20 +8,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($username === 'test' && $password === 'test123') {
         setcookie('token', '1');
         header('Location: home.php');
-        exit;
+        exit();
     } else {
         $error = 'Username or password is incorrect. Please try again.';
     }
 }
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Form</title>
-</head>
-<body>
+<?php include '_header.php'; ?>
     <h1>Login Form</h1>
 
 
@@ -43,10 +35,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </form>
 
     
-    <script type="module" src="inc/js/main.js"></script>
-    <script>document.write('<script src="http://'
-    + (location.host || 'localhost').split(':')[0]
-    + ':35729/livereload.js?snipver=1"></'
-    + 'script>')</script>
-</body>
-</html>
+    
+<?php include '_footer.php'; ?>
