@@ -1,4 +1,7 @@
 <?php
+$error = '';
+
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'];
     $password = $_POST['password'];
@@ -7,6 +10,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         setcookie('token', '1');
         header('Location: home.php');
         exit;
+    } else {
+        $error = 'Username or password is incorrect. Please try again.';
     }
 }
 ?>
@@ -19,6 +24,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body>
     <h1>Login Form</h1>
+
+
+    <?php if ($error): ?>
+        <div class="alert error">
+        <p><?php echo $error; ?></p>
+        </div>
+    <?php endif; ?>
+
     <form action="index.php" method="POST">
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" required><br><br>
