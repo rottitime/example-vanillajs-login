@@ -1,18 +1,19 @@
 @layer layout {
-  header {
+  header#site-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
 
     & a {
       text-decoration: none;
+      color: var(--color-text-light);
     }
     & h1 a {
       display: flex;
       align-items: center;
       justify-items: center;
       gap: var(--spacing-small);
-      color: var(--color-text);
+
       & img {
         width: 50px;
       }
@@ -21,6 +22,46 @@
     nav {
       display: flex;
       gap: var(--spacing-small);
+    }
+  }
+
+  .wrapper {
+    --main-width: 1430px;
+    --action-width: 400px;
+
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    height: 100vh;
+    max-width: var(--main-width);
+
+    & .column-content,
+    & .action {
+      padding: var(--spacing-medium);
+    }
+
+    & .action {
+      width: var(--action-width);
+    }
+
+    & .column-content {
+      background-color: #122762;
+      color: var(--palette-white);
+      position: relative;
+      order: 1;
+      width: calc(100% - var(--action-width));
+
+      &:after {
+        content: '';
+        width: 100vw;
+        background-color: inherit;
+        height: 100vh;
+        right: 0;
+        left: 100%;
+        top: 0;
+        position: absolute;
+        z-index: -1;
+      }
     }
   }
 }

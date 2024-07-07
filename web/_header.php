@@ -10,9 +10,20 @@
 <body>
 
 
-<header>
+
+
+
+<main>
+
+<div class="wrapper">
+    
+
+    <div class="column-content">
+
+    <header id="site-header">
     <h1>
-        <a href="index.php"><img src="inc/img/logo.svg" alt="Badgerworx logo" />Badgerworx</a>
+        <a href="index.php">
+        <img src="inc/img/logo.svg" alt="Badgerworx logo" />Badgerworx</a>
     </h1>
 
     <nav>
@@ -21,5 +32,10 @@
         <a href="#">News</a>
     </nav>
 </header>
+        
 
-<main>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus dignissimos velit voluptate culpa, ea veritatis consectetur dicta laudantium natus consequuntur dolores non libero optio repellat esse! Accusantium voluptatem ullam explicabo!</p>
+
+        <div class="full-width"></div>
+        
+    </div>

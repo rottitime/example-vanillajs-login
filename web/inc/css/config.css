@@ -15,7 +15,8 @@
     /* site colours */
     --color-link: var(--palette-blue);
     --color-text: var(--palette-black);
-    --color-background: var(--palette-cream);
+    --color-text-light: var(--palette-white);
+    --color-background: var(--palette-white);
 
     --spacing-xsmall: 10px;
     --spacing-small: 15px;

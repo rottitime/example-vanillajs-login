@@ -1,48 +1,49 @@
 @layer theme {
-    body {
-        font-family: var(--font);
-        color: var(--color-text);
-        background-color: var(--color-background);
+  body {
+    font-family: var(--font);
+    color: var(--color-text);
+    background-color: var(--color-background);
+    margin: 0;
+  }
+
+  a {
+    color: var(--color-link);
+    transition: all 0.5s ease-in-out;
+
+    &:hover {
+      color: color-mix(in srgb, var(--color-link) 80%, transparent);
     }
+  }
 
-    a {
-        color: var(--color-link);
-        transition: all .5s  ease-in-out;
+  label {
+    display: block;
+    margin-bottom: var(--spacing-xsmall);
+  }
 
-        &:hover {
-            color: color-mix(in srgb, var(--color-link) 80%, transparent);
-        }
-    }
+  input {
+    font: inherit;
+    letter-spacing: inherit;
+    color: currentcolor;
+    border: 2px solid var(--palette-black);
+    box-sizing: border-box;
+    background: none;
+    height: 1.4375em;
+    margin: 0px;
+    -webkit-tap-highlight-color: transparent;
+    display: block;
+    min-width: 0px;
+    width: 100%;
+    padding: 16.5px 14px;
+  }
 
-    label {
-        display: block;
-        margin-bottom: var(--spacing-xsmall);
-    }
-
-    input {
-        font: inherit;
-        letter-spacing: inherit;
-        color: currentcolor;
-        border: 2px solid var(--palette-black);
-        box-sizing: border-box;
-        background: none;
-        height: 1.4375em;
-        margin: 0px;
-        -webkit-tap-highlight-color: transparent;
-        display: block;
-        min-width: 0px;
-        width: 100%;
-        padding: 16.5px 14px;
-    }
-
-    button {
-     background-color: var(--color-link);
-     border: none;
-     min-width: 64px;
-     font-size: 15px;
+  button {
+    background-color: var(--color-link);
+    border: none;
+    min-width: 64px;
+    font-size: 15px;
     color: #fff;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-    }
+  }
 }

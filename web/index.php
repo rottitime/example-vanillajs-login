@@ -25,30 +25,48 @@ if (!$isAjax && $_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 ?>
 <?php include '_header.php'; ?>
-    <h1>Login Form</h1>
 
 
-    <?php if ($error): ?>
-        <div class="alert error">
-        <p><?php echo $error; ?></p>
+<div class="action">
+        
+
+
+        <?php if ($error): ?>
+            <div class="alert error">
+            <p><?php echo $error; ?></p>
+            </div>
+        <?php endif; ?>
+
+        <div class="card">
+            <header>
+                <h2>Login page</h2>
+            </header>
+            <div class="content">
+            <form action="index.php" method="POST" is="bw-login" id="login-form">
+
+                <div class="row">
+                <label for="username">Email:</label>
+                <input type="email" id="username" name="username" required placeholder="e.g. test@test.com" ><br><br>
+                </div>
+                
+                <div class="row">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                </div>
+                
+                
+            </form>
+            </div>
+            <footer>
+                    <button form="login-form" type="submit">Login</button>
+                </footer>
         </div>
-    <?php endif; ?>
-
-    <div class="card">
-        <form action="index.php" method="POST" is="bw-login">
-
-            <div class="row">
-            <label for="username">Email:</label>
-            <input type="email" id="username" name="username" required placeholder="e.g. test@test.com" ><br><br>
-            </div>
-            
-            <div class="row">
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-            </div>
-            <button>Login</button>
-        </form>
     </div>
+    
+
+    
+
+    
 
     
     
