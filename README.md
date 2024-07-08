@@ -11,21 +11,24 @@ Password can be anything
 
 ## Benefits
 
-- Mobile first approach
-- Design system concept - coded with config, theme, layout and component structure
-- Latest ECMAScript 2023 features such as module based JS
+- Mobile first approachm - This is the best practice and considers all devices early in development
+- Design system concept - coded with config, theme, layout and component structure. A light example of how I would break down code in [Atomic Design](https://medium.com/galaxy-ux-studio/principles-of-atomic-design-7b03a30c3cb6)
+- Latest ECMAScript 2023 features such as module based JS. Ideally I would setup babel to convert this for older browsers/devices
 - php docker for easy simple install
-- Ajax integration for web components
+- Ajax integration for web components - SPA approach provide much smoother experience for the user and also a performance boost as not loading all page asset with each reload
 - NPM setup and usuage (for prettier) without impacting production files and breaking exercise requirements.
 - Latest CSS features e.g. Native nested CSS, layout props, css vars
 - Frontend validation for instant feedback. Fallback to backend validation
-- Variable/config based CSS
-- Graceful degradation for older browsers.
+- Variable/config based CSS - for DRY practices and future changes can be implemented across one config file instead of multiple 
+- Graceful degradation for older browsers: I have opted for extended Webcomponents instead of creating my own unique tags. This means the html will still render but if JS is enabled then it will provide a more rich experience
+- Accessibility - although limited due to small pages. Accessibility tested across reporting suite, tabbing, label controls, clear user of HTML elements `header`, `nav`, `main` etc
 
 ## Out of scope
 
-If I had longer than a hour I would like to add:
+Timeboxed to few hours. If I had longer I would like to add:
 
+- Much better design :)
+- Accessibility demonstartion of another component. E.g. Accordion (my previos [code](https://i-dot-ai.github.io/etf/?path=/story/components-accordion--standard)) to show use of `aria-controls`, `aria-expanded`, `role`. With JS disabled this would be presented as a expanded list
 - [Jest](https://jestjs.io/) unit testing
 - Storybook to document design system elements
 - Pollyfill for older browsers e.g. nested CSS
