@@ -34,6 +34,7 @@ Timeboxed to few hours. If I had longer I would like to add:
 - Pollyfill for older browsers e.g. nested CSS
 - Typescript
 - Single page behaviour but with Graceful degradation for older browsers
+- Setup pipeline for automatic security patches (dependabot), unit test checker, pull requests, storybook/document automatic deployment
 
 ---
 
