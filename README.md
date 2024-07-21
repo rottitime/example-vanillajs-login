@@ -3,7 +3,7 @@ HTML/CSS first, accessible and progressively enhanced login page and homepage he
 ## Instructions
 
 1. Install [Docker](https://docs.docker.com/engine/install/)
-2. Run `docker compouse up`
+2. Run `docker compose up`
 3. Go to https://localhost:3000
 
 Userneme is "test@example.com"
