@@ -11,7 +11,7 @@ Password can be anything
 
 ## Benefits
 
-- Mobile first approachm - This is the best practice and considers all devices early in development
+- Mobile first approach - This is the best practice and considers all devices early in development
 - Design system concept - coded with config, theme, layout and component structure. A light example of how I would break down code in [Atomic Design](https://medium.com/galaxy-ux-studio/principles-of-atomic-design-7b03a30c3cb6)
 - Latest ECMAScript 2023 features such as module based JS. Ideally I would setup babel to convert this for older browsers/devices
 - php docker for easy simple install
